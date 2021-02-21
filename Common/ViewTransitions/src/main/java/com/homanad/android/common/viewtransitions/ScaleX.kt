@@ -11,8 +11,9 @@ import androidx.transition.TransitionValues
 class ScaleX(
     startX: Float,
     endX: Float,
-    pivotX: Float
-) : Scale(startX, 1f, endX, 1f, pivotX, 0f) {
+    pivotX: Float,
+    animDuration: Long = 300L
+) : Scale(startX, 1f, endX, 1f, pivotX, 0f, animDuration) {
 
     override fun onAppear(
         sceneRoot: ViewGroup?,

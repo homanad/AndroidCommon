@@ -11,8 +11,9 @@ open class Scale(
     protected val endX: Float,
     protected val endY: Float,
     protected val pivotX: Float,
-    protected val pivotY: Float
-) : DefaultScale() {
+    protected val pivotY: Float,
+    animDuration: Long = 300L
+) : DefaultScale(animDuration) {
 
     override fun onAppear(
         sceneRoot: ViewGroup?,

@@ -9,8 +9,9 @@ open class Rotate(
     private val fromDegrees: Float,
     private val toDegrees: Float,
     private val pivotX: Float,
-    private val pivotY: Float
-) : DefaultRotate() {
+    private val pivotY: Float,
+    animDuration: Long = 300L
+) : DefaultRotate(animDuration) {
 
     override fun onAppear(
         sceneRoot: ViewGroup?,

@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.transition.TransitionValues
 import androidx.transition.Visibility
 
-open class DefaultScale : Visibility() {
+open class DefaultScale(private val animDuration: Long = 300L) : Visibility() {
 
     protected fun createAnimation(
         view: View?,
@@ -28,6 +28,7 @@ open class DefaultScale : Visibility() {
 
         val animator = AnimatorSet()
         animator.playTogether(animScaleX, animScaleY)
+        animator.duration = animDuration
         return animator
     }
 

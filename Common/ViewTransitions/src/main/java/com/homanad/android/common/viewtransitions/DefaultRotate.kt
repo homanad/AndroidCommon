@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.transition.TransitionValues
 import androidx.transition.Visibility
 
-open class DefaultRotate : Visibility() {
+open class DefaultRotate(private val animDuration: Long = 300L) : Visibility() {
 
     protected fun createAnimation(
         view: View?,
@@ -20,7 +20,10 @@ open class DefaultRotate : Visibility() {
             it.pivotX = it.measuredWidth.getPivot(pivotX)
             it.pivotY = it.measuredHeight.getPivot(pivotY)
         }
-        return ObjectAnimator.ofFloat(view, View.ROTATION, fromDegrees, toDegrees).apply { start() }
+        return ObjectAnimator.ofFloat(view, View.ROTATION, fromDegrees, toDegrees).apply {
+            duration = animDuration
+            start()
+        }
     }
 
     override fun captureStartValues(transitionValues: TransitionValues) {
