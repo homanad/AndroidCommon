@@ -3,7 +3,7 @@ package com.homanad.android.common.extensions
 import android.app.Activity
 
 /**Usage
- * val needToGet by getValue<Type>("key")
+ * val needToGet by getValue<Type>("key", defaultValue)
  */
 inline fun <reified T : Any> Activity.getValue(key: String, defaultValue: T? = null) = lazy {
     val value = intent?.extras?.get(key)
