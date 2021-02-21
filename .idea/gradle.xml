@@ -13,7 +13,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Common" />
-            <option value="$PROJECT_DIR$/Common/CleanArchitecture" />
             <option value="$PROJECT_DIR$/Common/Components" />
             <option value="$PROJECT_DIR$/Common/Extensions" />
             <option value="$PROJECT_DIR$/Common/Utilities" />

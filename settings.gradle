@@ -1,4 +1,3 @@
-include ':Common:CleanArchitecture'
 include ':Common:Utilities'
 include ':Common:ViewTransitions'
 include ':Common:Components'
