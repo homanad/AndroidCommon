@@ -1,0 +1,6 @@
+include ':Common:Utilities'
+include ':Common:ViewTransitions'
+include ':Common:Components'
+include ':Common:Extensions'
+include ':Common'
+rootProject.name = "Common"
