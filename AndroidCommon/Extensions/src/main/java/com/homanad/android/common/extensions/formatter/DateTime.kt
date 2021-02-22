@@ -1,4 +1,4 @@
-package com.homanad.android.common.extensions
+package com.homanad.android.common.extensions.formatter
 
 import java.text.ParseException
 import java.text.SimpleDateFormat

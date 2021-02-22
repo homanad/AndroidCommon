@@ -1,4 +1,4 @@
-package com.homanad.android.common.extensions
+package com.homanad.android.common.extensions.resource
 
 import android.content.Context
 import android.view.animation.Animation

@@ -1,4 +1,4 @@
-package com.homanad.android.common.extensions
+package com.homanad.android.common.extensions.view
 
 import android.view.View
 import com.google.android.material.snackbar.Snackbar

@@ -1,4 +1,4 @@
-package com.homanad.android.common.extensions
+package com.homanad.android.common.extensions.fragment
 
 import androidx.fragment.app.Fragment
 

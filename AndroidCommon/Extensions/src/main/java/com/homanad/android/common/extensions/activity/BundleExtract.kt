@@ -1,4 +1,4 @@
-package com.homanad.android.common.extensions
+package com.homanad.android.common.extensions.activity
 
 import android.app.Activity
 
