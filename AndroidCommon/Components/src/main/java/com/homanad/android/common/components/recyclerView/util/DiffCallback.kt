@@ -1,4 +1,4 @@
-package com.homanad.android.common.components
+package com.homanad.android.common.components.recyclerView.util
 
 import androidx.recyclerview.widget.DiffUtil
 

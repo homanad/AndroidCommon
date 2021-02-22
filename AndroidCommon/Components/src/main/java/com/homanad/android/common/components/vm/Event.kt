@@ -1,4 +1,4 @@
-package com.homanad.android.common.components
+package com.homanad.android.common.components.vm
 
 import androidx.lifecycle.LifecycleOwner
 

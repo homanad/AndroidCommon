@@ -1,4 +1,4 @@
-package com.homanad.android.common.components
+package com.homanad.android.common.components.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
