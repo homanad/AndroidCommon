@@ -12,11 +12,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Common" />
-            <option value="$PROJECT_DIR$/Common/Components" />
-            <option value="$PROJECT_DIR$/Common/Extensions" />
-            <option value="$PROJECT_DIR$/Common/Utilities" />
-            <option value="$PROJECT_DIR$/Common/ViewTransitions" />
+            <option value="$PROJECT_DIR$/AndroidCommon" />
+            <option value="$PROJECT_DIR$/AndroidCommon/Components" />
+            <option value="$PROJECT_DIR$/AndroidCommon/Extensions" />
+            <option value="$PROJECT_DIR$/AndroidCommon/Utilities" />
+            <option value="$PROJECT_DIR$/AndroidCommon/ViewTransitions" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

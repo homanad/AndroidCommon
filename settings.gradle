@@ -1,6 +1,11 @@
-include ':Common:Utilities'
-include ':Common:ViewTransitions'
-include ':Common:Components'
-include ':Common:Extensions'
-include ':Common'
-rootProject.name = "Common"
+include ':Utilities'
+include ':ViewTransitions'
+include ':Components'
+include ':Extensions'
+include ':AndroidCommon'
+rootProject.name = "AndroidCommon"
+
+project(":Utilities").projectDir = new File(rootDir, "AndroidCommon/Utilities")
+project(":ViewTransitions").projectDir = new File(rootDir, "AndroidCommon/ViewTransitions")
+project(":Components").projectDir = new File(rootDir, "AndroidCommon/Components")
+project(":Extensions").projectDir = new File(rootDir, "AndroidCommon/Extensions")
