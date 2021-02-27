@@ -5,11 +5,11 @@ import androidx.annotation.StringRes
 import com.google.android.material.snackbar.Snackbar
 import com.homanad.android.common.extensions.view.animator.createRevealAnimator
 
-fun View.show() {
+fun View.visible() {
     visibility = View.VISIBLE
 }
 
-fun View.hide() {
+fun View.invisible() {
     visibility = View.INVISIBLE
 }
 
@@ -42,13 +42,13 @@ fun View.showInfiniteSnackbar(@StringRes messageRes: Int) {
 }
 
 fun View.snackBarWithAction(
-    message: String, actionLabel: String,
-    action: () -> Unit
+    message: String,
+    actionLabel: String,
+    action: () -> Unit,
+    length: Int = Snackbar.LENGTH_LONG
 ) {
-    Snackbar.make(this, message, Snackbar.LENGTH_LONG)
-        .setAction(actionLabel) {
-            action()
-        }
+    Snackbar.make(this, message, length)
+        .setAction(actionLabel) { action() }
 }
 
 fun View.startRevealAnimation(centerX: Int, centerY: Int, startRadius: Float, endRadius: Float) {
