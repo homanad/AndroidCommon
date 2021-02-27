@@ -1,6 +1,7 @@
 package com.homanad.android.common.extensions.view
 
 import android.view.View
+import androidx.annotation.StringRes
 import com.google.android.material.snackbar.Snackbar
 import com.homanad.android.common.extensions.view.animator.createRevealAnimator
 
@@ -20,8 +21,24 @@ fun View.showShortSnackbar(message: String) {
     Snackbar.make(this, message, Snackbar.LENGTH_SHORT).show()
 }
 
+fun View.showShortSnackbar(@StringRes messageRes: Int) {
+    Snackbar.make(this, messageRes, Snackbar.LENGTH_SHORT).show()
+}
+
 fun View.showLongSnackbar(message: String) {
     Snackbar.make(this, message, Snackbar.LENGTH_LONG).show()
+}
+
+fun View.showLongSnackbar(@StringRes messageRes: Int) {
+    Snackbar.make(this, messageRes, Snackbar.LENGTH_LONG).show()
+}
+
+fun View.showInfiniteSnackbar(message: String) {
+    Snackbar.make(this, message, Snackbar.LENGTH_INDEFINITE).show()
+}
+
+fun View.showInfiniteSnackbar(@StringRes messageRes: Int) {
+    Snackbar.make(this, messageRes, Snackbar.LENGTH_INDEFINITE).show()
 }
 
 fun View.snackBarWithAction(
