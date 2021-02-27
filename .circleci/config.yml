@@ -1,0 +1,55 @@
+version: 2
+
+jobs:
+  build:
+    description: |
+      Start building
+    working_directory: ~/project
+    docker:
+      - image: circleci/android:api-30
+    environment:
+      _JAVA_OPTIONS: "-Xmx3g"
+    #      GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'
+
+    steps:
+      - checkout
+      #      - run:
+      #          name: Update sdk licenses
+      #          command: |
+      #            yes | sdkmanager --licenses --proxy=http --proxy_host=${proxyHost} --proxy_port=${proxyPort} || true
+      #            yes | sdkmanager --update --proxy=http --proxy_host=${proxyHost} --proxy_port=${proxyPort} || true
+      - run: yes | sdkmanager --licenses || exit 0
+      - run: yes | sdkmanager --update || exit 0
+      - run:
+          name: Chmod permissions
+          command: |
+            sudo chmod +x ./gradlew
+      - restore_cache:
+          keys:
+            - dependencies-{{ checksum "build.gradle" }}
+            - dependencies-
+      - run:
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
+      - save_cache:
+          paths:
+            - ~/.gradle
+          key: dependencies-{{ checksum "build.gradle" }}
+      - run:
+          name: Build Release
+          command: ./gradlew assembleRelease --no-daemon --parallel --configure-on-demand
+      - store_artifacts:
+          path: AndroidCommon/build/outputs/aar/
+          destination: /
+      - store_artifacts:
+          path: AndroidCommon/Components/build/outputs/aar/
+          destination: /
+      - store_artifacts:
+          path: AndroidCommon/Extensions/build/outputs/aar/
+          destination: /
+      - store_artifacts:
+          path: AndroidCommon/Utilities/build/outputs/aar/
+          destination: /
+      - store_artifacts:
+          path: AndroidCommon/ViewTransitions/build/outputs/aar/
+          destination: /
