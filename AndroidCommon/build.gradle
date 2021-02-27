@@ -33,11 +33,10 @@ android {
     }
     sourceSets {
         main.java.srcDirs += [
-                'Components/src/main/java/com/homanad/android/',
-                'Extensions/src/main/java/com/homanad/android/',
-                'ViewTransitions/src/main/java/com/homanad/android/',
-                'Utilities/src/main/java/com/homanad/android/',
-                'CleanArchitecture/src/main/java/com/homanad/android/'
+                'Components/src/main/kotlin/com/homanad/android/',
+                'Extensions/src/main/kotlin/com/homanad/android/',
+                'ViewTransitions/src/main/kotlin/com/homanad/android/',
+                'Utilities/src/main/kotlin/com/homanad/android/'
         ]
     }
     buildFeatures{
