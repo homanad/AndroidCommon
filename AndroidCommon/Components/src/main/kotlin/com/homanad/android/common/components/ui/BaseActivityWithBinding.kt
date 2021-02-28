@@ -2,8 +2,11 @@ package com.homanad.android.common.components.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewbinding.ViewBinding
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivityWithBinding : AppCompatActivity() {
+
+    protected abstract val binding: ViewBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -11,7 +14,7 @@ abstract class BaseActivity : AppCompatActivity() {
         observeData()
     }
 
-    abstract fun updateUI()
+    protected abstract fun updateUI()
 
-    abstract fun observeData()
+    protected abstract fun observeData()
 }
