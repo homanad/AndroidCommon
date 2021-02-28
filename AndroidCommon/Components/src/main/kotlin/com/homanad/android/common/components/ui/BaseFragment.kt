@@ -9,11 +9,11 @@ abstract class BaseFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupViewModel()
-        observeData()
         updateUI()
+        observeData()
     }
 
     protected abstract fun setupViewModel()
-    protected abstract fun observeData()
     protected abstract fun updateUI()
+    protected abstract fun observeData()
 }
